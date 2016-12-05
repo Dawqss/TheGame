@@ -1,0 +1,29 @@
+{
+  "name": "dawid-thegame",
+  "version": "1.0.0",
+  "description": "the Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "forTheEmperor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dawqss/TheGame.git"
+  },
+  "keywords": [
+    "the",
+    "game",
+    "canvas"
+  ],
+  "author": "Dawid Wyrkowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dawqss/TheGame/issues"
+  },
+  "homepage": "https://github.com/Dawqss/TheGame#readme",
+  "devDependencies": {
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.1"
+  }
+}

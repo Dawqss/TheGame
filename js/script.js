@@ -157,7 +157,7 @@ function collisionDetection() {
         for(r=0; r<brickRowCount; r++) {
             var b = bricks[c][r];
             if(b.status == 1){
-            	if(x + ballRadius > b.x && x + ballRadius < b.x+brickWidth && y + ballRadius > b.y && y + ballRadius < b.y+brickHeight) {
+            	if(x > b.x - ballRadius && x < b.x + brickWidth + ballRadius && y - ballRadius > b.y && y < b.y + brickHeight + ballRadius) {
             	dy = -dy;
             	dx = -dx;
             	b.status = 0;

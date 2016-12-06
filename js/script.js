@@ -1,24 +1,24 @@
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-var x = canvas.width/2;
-var y = canvas.height-30;
-var dx = -1.5;
-var dy = -3;
-var ballRadius = 10;
-var paddleHeight = 10;
-var paddleWidth = 75;
-var paddleX = (canvas.width-paddleWidth)/2;
-var rightPressed = false;
-var leftPressed = false;
-var brickRowCount = 3;
-var brickColumnCount = 5;
-var brickWidth = 75;
-var brickHeight = 20;
-var brickPadding = 10;
-var brickOffsetTop = 30;
-var brickOffsetLeft = 30;
-var score = 0;
-var lives = 3;
+var canvas = document.getElementById("myCanvas"),
+	ctx = canvas.getContext("2d"),
+	x = canvas.width/2,
+	y = canvas.height-30,
+	dx = -1.5,
+	dy = -3,
+	ballRadius = 10,
+	paddleHeight = 10,
+	paddleWidth = 75,
+	paddleX = (canvas.width-paddleWidth)/2,
+	rightPressed = false,
+	leftPressed = false,
+	brickRowCount = 3,
+	brickColumnCount = 5,
+	brickWidth = 75,
+	brickHeight = 20,
+	brickPadding = 10,
+	brickOffsetTop = 30,
+	brickOffsetLeft = 30,
+	score = 0,
+	lives = 3;
 
 var bricks = [];
 	for(var c=0; c<brickColumnCount; c++) {
@@ -157,7 +157,7 @@ function collisionDetection() {
         for(r=0; r<brickRowCount; r++) {
             var b = bricks[c][r];
             if(b.status == 1){
-            	if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+            	if(x + ballRadius > b.x && x + ballRadius < b.x+brickWidth && y + ballRadius > b.y && y + ballRadius < b.y+brickHeight) {
             	dy = -dy;
             	dx = -dx;
             	b.status = 0;
